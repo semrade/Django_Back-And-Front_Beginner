@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experience List</title>
+</head>
+<body>
+    <h1>Experience List</h1>
+    <ul>
+        {% for experience in experiences %}
+            <li>{{ experience.job_title }} at {{ experience.company }} ({{ experience.start_date }} - {{ experience.end_date|default:"Present" }})</li>
+            <p>{{ experience.description }}</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

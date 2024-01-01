@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Education List</title>
+</head>
+<body>
+    <h1>Education List</h1>
+    <ul>
+        {% for education in educations %}
+            <li>{{ education.degree }} - {{ education.institution }} ({{ education.graduation_year }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
