@@ -40,7 +40,7 @@ python manage.py migrate
 -   Create HTML templates in each app's `templates` directory.
 # Step 5: Set Up React App
 1/Install Node.js and npm:
--   Install Node.js and npm from  [Click Here](https://nodejs.org/en "Click Here")
+-   Install Node.js and npm from  [Click Here](https://nodejs.org/en "Click Here").
 2/Create React App:
 ```
 npx create-react-app react_app
