@@ -36,6 +36,7 @@ python manage.py migrate
 # Step 4: Create Django Views and Templates
 1/Create Views:
 -   Define views for each app in their respective `views.py` files.
+
 2/Create Templates:
 -   Create HTML templates in each app's `templates` directory.
 # Step 5: Set Up React App
