@@ -59,6 +59,7 @@ pip install django-cors-headers
 2/Configure Django Settings:
 -   Add `corsheaders` to INSTALLED_APPS and `corsheaders.middleware.CorsMiddleware` to `MIDDLEWARE` in `settings.py`.
 -   Set `corsheaders.middleware.CorsMiddleware` at the top of the `MIDDLEWARE` list.
+  
 3/Configure CORS Settings:
 -   Add the following to `settings.py`:
 ```
@@ -69,6 +70,7 @@ CORS_ALLOWED_ORIGINS = [
 # Step 7: Connect React Components
 1/Update React App:
 -   Update React components in the `src` directory to fetch data from Django backend.
+
 2/Run React App:
 ```
 npm start
