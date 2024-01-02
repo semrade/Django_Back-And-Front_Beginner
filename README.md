@@ -99,7 +99,8 @@ To be able to work with React we have to serialize data from the Django project 
 
 1/Create a JSON Serializer (serializers.py):
 -  Create a serializer in `serializers.py` to handle the serialization of the `Experience` model to JSON
-```
+
+```python
 # serializers.py in your Django app
 
 from rest_framework import serializers
@@ -121,7 +122,7 @@ pip install djangorestframework
 
 2/Create a JSON View (views.py):
 -  Create a separate view that uses the serializer to return a JSON response.
-```
+```python
 # views.py in your Django app
 
 from django.http import JsonResponse
@@ -137,7 +138,7 @@ def experience_list_json(request):
 
 3/Update URLs (urls.py):
 -  Add a new URL pattern in urls.py to map to the JSON view.
-```
+```python
 # urls.py in your Django app
 
 from django.urls import path
