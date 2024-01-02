@@ -63,7 +63,7 @@ pip install django-cors-headers
   
 3/Configure CORS Settings:
 -   Add the following to `settings.py`:
-```
+```python
 CORS_ALLOWED_ORIGINS = [
 "http://localhost:3000",  # or your React app's URL
 ]
