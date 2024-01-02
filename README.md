@@ -60,6 +60,19 @@ pip install django-cors-headers
 2/Configure Django Settings:
 -   Add `corsheaders` to INSTALLED_APPS and `corsheaders.middleware.CorsMiddleware` to `MIDDLEWARE` in `settings.py`.
 -   Set `corsheaders.middleware.CorsMiddleware` at the top of the `MIDDLEWARE` list.
+
+```python
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+```
   
 3/Configure CORS Settings:
 -   Add the following to `settings.py`:
