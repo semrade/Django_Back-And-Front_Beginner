@@ -82,3 +82,94 @@ python manage.py runserver
 ```
 
 Now, your Django project with two apps (`resume` and `task`) and a connected React app should be set up. Adjust the details according to your specific requirements and project structure.
+
+# Step 9 Testing:
+Now, when you run your Django development server (python manage.py runserver), you can access the following URLs:
+
+-  Resume Education List: http://localhost:8000/resume/education-list/
+-  Resume Experience List: http://localhost:8000/resume/experience-list/
+-  Task List: http://localhost:8000/task/task-list/
+
+Make sure to replace http://localhost:8000/ with your actual server address. If you are running the server locally, it will typically be http://localhost:8000/. Adjust the URLs and paths according to your project structure and preferences.
+
+# step 10 Serialisation:
+
+For now, the Django project uses HTML files to display the views, this is a normal behavior to display the views in the back in debug mode and check the server like I did in step 9.
+To be able to work with React we have to serialize data from the Django project to the React app, React is a JavaScript language and it understands JSON files.
+
+1/Create a JSON Serializer (serializers.py):
+-  Create a serializer in `serializers.py` to handle the serialization of the `Experience` model to JSON
+```
+# serializers.py in your Django app
+
+from rest_framework import serializers
+from .models import Experience
+
+class ExperienceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Experience
+        fields = ['id', 'job_title', 'company', 'start_date', 'end_date', 'description', ...]
+        # Include other fields as needed
+
+```
+reset_framwork needs to be installed.
+Open a terminal or command prompt, navigate to your project's directory, and run the following command:
+```
+pip install djangorestframework
+
+```
+
+2/Create a JSON View (views.py):
+-  Create a separate view that uses the serializer to return a JSON response.
+```
+# views.py in your Django app
+
+from django.http import JsonResponse
+from .models import Experience
+from .serializers import ExperienceSerializer
+
+def experience_list_json(request):
+    experiences = Experience.objects.all()
+    serializer = ExperienceSerializer(experiences, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
+```
+
+3/Update URLs (urls.py):
+-  Add a new URL pattern in urls.py to map to the JSON view.
+```
+# urls.py in your Django app
+
+from django.urls import path
+from .views import experience_list, experience_list_json
+
+urlpatterns = [
+    # ... other URL patterns
+    path('experience-list/', experience_list, name='experience-list'),
+    path('experience-list-json/', experience_list_json, name='experience-list-json'),
+]
+
+```
+
+Now, you can access the HTML-rendered view at 
+`http://localhost:8000/resume/experience-list/` and the JSON view at 
+`http://localhost:8000/resume/experience-list-json/`. 
+The existing view remains unchanged, and you have a separate endpoint to retrieve the data in JSON format.
+
+Please replace the ellipses (`...`) with the actual field names from your Experience model in the serializer.
+Step 10 must be duplicated on the `task` and `Education` models.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
