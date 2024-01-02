@@ -92,6 +92,12 @@ Now, when you run your Django development server (python manage.py runserver), y
 
 Make sure to replace http://localhost:8000/ with your actual server address. If you are running the server locally, it will typically be http://localhost:8000/. Adjust the URLs and paths according to your project structure and preferences.
 
+![image](https://github.com/semrade/Django_Back-And-Front_Beginner/assets/17770194/a8528f88-5aaf-49ea-8ce0-9011b0e7331b)
+
+![image](https://github.com/semrade/Django_Back-And-Front_Beginner/assets/17770194/d577080a-78c7-4cdc-a300-1954722a9a27)
+
+![image](https://github.com/semrade/Django_Back-And-Front_Beginner/assets/17770194/a0b1ccf9-4248-4454-8c47-41eefa135a8e)
+
 # step 10 Serialisation:
 
 For now, the Django project uses HTML files to display the views, this is a normal behavior to display the views in the back in debug mode and check the server like I did in step 9.
