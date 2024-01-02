@@ -161,6 +161,11 @@ urlpatterns = [
 Now, you can access the HTML-rendered view at 
 `http://localhost:8000/resume/experience-list/` and the JSON view at 
 `http://localhost:8000/resume/experience-list-json/`. 
+![image](https://github.com/semrade/Django_Back-And-Front_Beginner/assets/17770194/30f4bade-2584-4756-a15b-d74f610aa7dd)
+
+![image](https://github.com/semrade/Django_Back-And-Front_Beginner/assets/17770194/e6ad4649-0d64-4f2a-bb8d-1282c5d3ee5c)
+
+
 The existing view remains unchanged, and you have a separate endpoint to retrieve the data in JSON format.
 
 Please replace the ellipses (`...`) with the actual field names from your Experience model in the serializer.
