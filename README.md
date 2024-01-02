@@ -1,6 +1,6 @@
 # Step 1: Set Up Django Project
 1/Install Django:
-```
+```bash
 pip install django
 ```
 2/Create Django Project:
@@ -18,7 +18,7 @@ python manage.py startapp task
 ```
 # Step 2: Configure Django Apps
 -   Add the created apps to the `INSTALLED_APPS` list.
-```
+```python
 INSTALLED_APPS = [
 # other apps...
 'resume',
