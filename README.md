@@ -171,9 +171,18 @@ The existing view remains unchanged, and you have a separate endpoint to retriev
 Please replace the ellipses (`...`) with the actual field names from your Experience model in the serializer.
 Step 10 must be duplicated on the `task` and `Education` models.
 
+# step 11 run React App:
+
+To run the react App you have to open a new terminal and navigate to the app directory.
+Run
+```
+npm start
+```
+Remember to run your React app (npm start) and ensure that the Django server is still running (python manage.py runserver). 
+Now, when you access your React app, it should fetch and display data from your Django backend.
 
 
-
+![image](https://github.com/semrade/Django_Back-And-Front_Beginner/assets/17770194/86b89bd0-93cc-4fc9-a06c-e7be14a558d2)
 
 
 
