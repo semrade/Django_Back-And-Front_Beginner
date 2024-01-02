@@ -84,7 +84,7 @@ python manage.py runserver
 Now, your Django project with two apps (`resume` and `task`) and a connected React app should be set up. Adjust the details according to your specific requirements and project structure.
 
 # Step 9 Testing:
-Now, when you run your Django development server (python manage.py runserver), you can access the following URLs:
+Now, when you run your Django development server (`python manage.py runserver`), you can access the following URLs:
 
 -  Resume Education List: http://localhost:8000/resume/education-list/
 -  Resume Experience List: http://localhost:8000/resume/experience-list/
