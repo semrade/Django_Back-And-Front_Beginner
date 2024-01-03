@@ -96,7 +96,7 @@ python manage.py runserver
 
 Now, your Django project with two apps (`resume` and `task`) and a connected React app should be set up. Adjust the details according to your specific requirements and project structure.
 
-# Step 9 Testing:
+# Step 9: Testing
 Now, when you run your Django development server (`python manage.py runserver`), you can access the following URLs:
 
 -  Resume Education List: http://localhost:8000/resume/education-list/
@@ -111,7 +111,7 @@ Make sure to replace http://localhost:8000/ with your actual server address. If 
 
 ![image](https://github.com/semrade/Django_Back-And-Front_Beginner/assets/17770194/a0b1ccf9-4248-4454-8c47-41eefa135a8e)
 
-# Step 10 Serialisation:
+# Step 10: Serialisation
 
 For now, the Django project uses HTML files to display the views, this is a normal behavior to display the views in the back in debug mode and check the server like I did in step 9.
 To be able to work with React we have to serialize data from the Django project to the React app, React is a JavaScript language and it understands JSON files.
